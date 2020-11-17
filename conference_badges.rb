@@ -20,6 +20,17 @@ def assign_rooms(speakers)
 end
 
 def printer
-  list_of_badges
+  assigned_rooms = []
+  list_of_badges = []
+  
+  attendees.each do |name|
+    list_of_badges << badge_maker(name)
+  end
+  
+  speakers.each_with_index do |name, index|
+    assigned_rooms << "Hello, #{name}! You'll be assigned to room #{index+1}!"
+  end
+
   assigned_rooms
+  list_of_badges
 end
