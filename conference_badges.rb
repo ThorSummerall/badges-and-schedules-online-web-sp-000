@@ -3,8 +3,8 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(attendees)
-  array = attendees
-  return array
+  list_of_badges = [attendees]
+  return list_of_badges
 end
 
 def assign_rooms
